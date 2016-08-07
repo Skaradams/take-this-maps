@@ -1,38 +1,15 @@
-var map = {
-    rows: [
-        {
-            tiles: [
-                {
-                    id: 'A1'
-                },
-                {
-                    id: 'A2'
-                }
-            ]
-        },
-        {
-            tiles: [
-                {
-                    id: 'B1'
-                },
-                {
-                    id: 'B2'
-                }
-            ]
-        }
-    ]
-};
-
 $(document).ready(function(){
-    var row, tile;
-    for (var i = 0; i < map.rows.length; i++) {
-        row = $('<div></div>');
-        row.addClass('row');
-        for (var j = 0; j < map.rows[i].tiles.length; j++) {
-            tile = $('<div></div>');
-            tile.addClass(map.rows[i].tiles[j].id);
-
-
-        }
-    }
+    var canvas = new fabric.Canvas('canvas');
+    var img = $('#zelda-overworld');
+    canvas.setHeight($('#zelda-overworld').height());
+    canvas.setWidth($('#zelda-overworld').width());
+    
+    // console.log($('#zelda-overworld').height());
+    var imgInstance = new fabric.Image(img[0], {
+      left: 0,
+      top: 0,
+      angle: 0,
+      opacity: 1
+    });
+    canvas.add(imgInstance);
 });
