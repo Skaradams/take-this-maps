@@ -1,3 +1,11 @@
 #canvas {
     border: 2px solid black;
 }
+
+#zelda-overworld {
+    display: none;
+}
+
+#questionContent svg rect {
+    fill: red;
+}
